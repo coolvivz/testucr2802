@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SAP_BOC_SPATIAL::cv_location" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="cv_location"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Synonyms::SPATIALNEWCOUNT">
+    <resourceUri>Synonyms::SPATIALNEWCOUNT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="Synonyms::SPATIALNEWCOUNT">
+  <attributes>
+    <attribute id="COUNTRY_REGION_SP" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY_REGION_SP"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="COUNTRY_REGION"/>
+    </attribute>
+    <attribute id="LATITUDE_SP" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LATITUDE"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="LATITUDE"/>
+    </attribute>
+    <attribute id="LONGITUDE_SP" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LONGITUDE"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="LONGITUDE"/>
+    </attribute>
+    <attribute id="GEOMID_SP" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOMID_SP"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="GEOMID"/>
+    </attribute>
+    <attribute id="GEOM3857_SP" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOM3857_SP"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="GEOM3857"/>
+    </attribute>
+    <attribute id="PROVINCE_STATE_SP" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROVINCE_STATE_SP"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="PROVINCE_STATE"/>
+    </attribute>
+    <attribute id="FIPS_SP" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FIPS_SP"/>
+      <keyMapping columnObjectName="SPATIALNEWCOUNT" columnName="FIPS"/>
+    </attribute></attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

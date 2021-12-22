@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SAP_BOC_SPATIAL::vt_star_geo" applyPrivilegeType="NONE" dataCategory="DIMENSION" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="vt_star_geo"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Models::VT_STAR_COVID">
+    <resourceUri>Models::VT_STAR_COVID</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="POINT_ST"/>
+      <viewAttribute id="GID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Models::VT_STAR_COVID"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="POINT_STN" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POINT_ST"/>
+      <keyMapping columnObjectName="Projection_1" columnName="POINT_ST"/>
+    </attribute>
+    <attribute id="GIDN" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/></logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-72" y="218"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

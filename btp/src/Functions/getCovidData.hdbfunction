@@ -1,0 +1,15 @@
+FUNCTION "Functions::getCovidData"( )
+    RETURNS TABLE ("country_region" NVARCHAR(5000), "province_state" NVARCHAR(5000),
+                   "fips" nvarchar(5000), "date" date , "confirmed" integer, "deaths" integer,
+                   "recovered" INTEGER, "active" INTEGER)
+    /*****************************
+        Write your function logic
+    ****************************/
+ as BEGIN RETURN
+ SELECT "country_region", "province_state" , "fips" , "date", MAX("confirmed") as "confirmed",
+ MAX("deaths") as "deaths" ,MAX("recovered") as "recovered" ,  MAX("active") as "active"
+  FROM  "Synonyms::VT_covidsummary2021"
+ WHERE "country_region" = 'US'
+ GROUP BY "country_region", "province_state" , "fips", "date" ;
+
+END;

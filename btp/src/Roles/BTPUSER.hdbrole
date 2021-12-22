@@ -1,0 +1,14 @@
+{
+  "role": {
+    "name": "Roles::BTPUSER",
+    "schema_privileges": [
+      {
+        "privileges": [
+          "EXECUTE",
+          "SELECT",
+          "SELECT METADATA"
+        ]
+      }
+    ]
+  }
+}

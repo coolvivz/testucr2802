@@ -1,0 +1,11 @@
+FUNCTION "Functions::getID"( )
+    RETURNS TABLE (ID INT)
+    LANGUAGE SQLSCRIPT
+    SQL SECURITY INVOKER AS
+BEGIN
+    /*****************************
+        Write your function logic
+    ****************************/
+    RETURN
+    SELECT "Synonyms::LOCID".NEXTVAL AS ID  FROM "Synonyms::DUMMY" ;
+END;

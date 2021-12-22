@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Models::cv_location_data" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="cv_location_data"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Synonyms::SPATIALNEWCOUNT">
+    <resourceUri>Synonyms::SPATIALNEWCOUNT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <viewAttributes>
+      <viewAttribute id="COUNTRY_REGION"/>
+      <viewAttribute id="DATE"/>
+      <viewAttribute id="LATITUDE" aggregationType="sum"/>
+      <viewAttribute id="LONGITUDE" aggregationType="sum"/>
+      <viewAttribute id="CONFIRMED" aggregationType="sum"/>
+      <viewAttribute id="DEATHS" aggregationType="sum"/>
+      <viewAttribute id="RECOVERED" aggregationType="sum"/>
+      <viewAttribute id="ACTIVE" aggregationType="sum"/>
+      <viewAttribute id="GEOMID" aggregationType="sum"/>
+      <viewAttribute id="GEOM3857"/>
+      <viewAttribute id="PROVINCE_STATE"/>
+      <viewAttribute id="FIPS"/>
+      <viewAttribute id="ADMIN2"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Synonyms::SPATIALNEWCOUNT"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Aggregation_1">
+  <attributes>
+    <attribute id="COUNTRY_REGION" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY_REGION"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="COUNTRY_REGION"/>
+    </attribute>
+    <attribute id="DATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DATE"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="DATE"/>
+    </attribute>
+    <attribute id="GEOMID" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOMID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="GEOMID"/>
+    </attribute>
+    <attribute id="GEOM3857" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOM3857"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="GEOM3857"/>
+    </attribute>
+    <attribute id="PROVINCE_STATE" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROVINCE_STATE"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="PROVINCE_STATE"/>
+    </attribute>
+    <attribute id="FIPS" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FIPS"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="FIPS"/>
+    </attribute>
+    <attribute id="ADMIN2" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADMIN2"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ADMIN2"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="LATITUDE" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LATITUDE"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="LATITUDE"/>
+    </measure>
+    <measure id="LONGITUDE" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LONGITUDE"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="LONGITUDE"/>
+    </measure>
+    <measure id="CONFIRMED" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CONFIRMED"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="CONFIRMED"/>
+    </measure>
+    <measure id="DEATHS" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DEATHS"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="DEATHS"/>
+    </measure>
+    <measure id="RECOVERED" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="RECOVERED"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="RECOVERED"/>
+    </measure>
+    <measure id="ACTIVE" order="8" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ACTIVE"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="ACTIVE"/>
+    </measure></baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="105" y="212"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

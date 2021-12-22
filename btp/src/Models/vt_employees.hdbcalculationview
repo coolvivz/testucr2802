@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Models::vt_employees" applyPrivilegeType="NONE" dataCategory="DIMENSION" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="vt_employees"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Synonyms::EMPLOYEEDATA">
+    <resourceUri>Synonyms::EMPLOYEEDATA</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Aggregation_1">
+    <viewAttributes>
+      <viewAttribute id="EMPID"/>
+      <viewAttribute id="EMPNAME"/>
+      <viewAttribute id="RECIPIENT_EMAIL"/>
+      <viewAttribute id="COUNTYNAME"/>
+      <viewAttribute id="STATENAME"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Synonyms::EMPLOYEEDATA"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Aggregation_1">
+  <attributes>
+    <attribute id="EMPID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMPID"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="EMPID"/>
+    </attribute>
+    <attribute id="EMPNAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMPNAME"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="EMPNAME"/>
+    </attribute>
+    <attribute id="RECIPIENT_EMAIL" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECIPIENT_EMAIL"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="RECIPIENT_EMAIL"/>
+    </attribute>
+    <attribute id="COUNTYNAME" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTYNAME"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="COUNTYNAME"/>
+    </attribute>
+    <attribute id="STATENAME" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATENAME"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="STATENAME"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/></logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-34" y="449"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

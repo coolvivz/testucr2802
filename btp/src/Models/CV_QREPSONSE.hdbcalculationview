@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Models::CV_QREPSONSE" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="CV_QREPSONSE"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Synonyms::TECHCOENA_QINTEGRATION_USERINFO">
+    <resourceUri>Synonyms::TECHCOENA_QINTEGRATION_USERINFO</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="Synonyms::TECHCOENA_QINTEGRATION_USERINFO">
+  <attributes>
+    <attribute id="DURATION_IN_SECONDS" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DURATION_IN_SECONDS"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="DURATION_IN_SECONDS"/>
+    </attribute>
+    <attribute id="RESPONSEID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESPONSEID"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="RESPONSEID"/>
+    </attribute>
+    <attribute id="RECIPIENTLASTNAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECIPIENTLASTNAME"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="RECIPIENTLASTNAME"/>
+    </attribute>
+    <attribute id="RECIPIENTFIRSTNAME" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECIPIENTFIRSTNAME"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="RECIPIENTFIRSTNAME"/>
+    </attribute>
+    <attribute id="RECIPIENTEMAIL" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECIPIENTEMAIL"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="RECIPIENTEMAIL"/>
+    </attribute>
+    <attribute id="Q1" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q1"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q1"/>
+    </attribute>
+    <attribute id="Q2" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q2"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q2"/>
+    </attribute>
+    <attribute id="Q3" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q3"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q3"/>
+    </attribute>
+    <attribute id="Q30" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q30"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q30"/>
+    </attribute>
+    <attribute id="Q31" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31"/>
+    </attribute>
+    <attribute id="Q31_PARENT_TOPICS" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_PARENT_TOPICS"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_PARENT_TOPICS"/>
+    </attribute>
+    <attribute id="Q31_SENTIMENT_POLARITY" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_SENTIMENT_POLARITY"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_SENTIMENT_POLARITY"/>
+    </attribute>
+    <attribute id="Q31_SENTIMENT_SCORE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_SENTIMENT_SCORE"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_SENTIMENT_SCORE"/>
+    </attribute>
+    <attribute id="Q31_SENTIMENT" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_SENTIMENT"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_SENTIMENT"/>
+    </attribute>
+    <attribute id="Q31_TOPIC_SENTIMENT_LABEL" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_TOPIC_SENTIMENT_LABEL"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_TOPIC_SENTIMENT_LABEL"/>
+    </attribute>
+    <attribute id="Q31_TOPIC_SENTIMENT_SCORE" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_TOPIC_SENTIMENT_SCORE"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_TOPIC_SENTIMENT_SCORE"/>
+    </attribute>
+    <attribute id="Q31_TOPICS" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Q31_TOPICS"/>
+      <keyMapping columnObjectName="TECHCOENA_QINTEGRATION_USERINFO" columnName="Q31_TOPICS"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures>
+    <measure id="COUNT_RID" order="18" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="BIGINT" length="">
+      <descriptions defaultDescription="COUNT_RID"/>
+      <exceptionAggregation>
+        <attribute attributeName="RESPONSEID"/>
+      </exceptionAggregation>
+      <formula>1</formula>
+      </measure>
+    <measure id="COUNT_EMAIL" order="19" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="BIGINT" length="">
+      <descriptions defaultDescription="COUNT_EMAIL"/>
+      <exceptionAggregation>
+        <attribute attributeName="RECIPIENTEMAIL"/>
+      </exceptionAggregation>
+      <formula>1</formula>
+      </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

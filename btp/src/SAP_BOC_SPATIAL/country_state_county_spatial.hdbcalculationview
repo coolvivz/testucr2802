@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SAP_BOC_SPATIAL::country_state_county_spatial" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="country_state_county_spatial"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Models::country_state_county">
+    <resourceUri>Models::country_state_county</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="Models::country_state_county">
+  <attributes>
+    <attribute id="PROVINCE_STATE_" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROVINCE_STATE"/>
+      <keyMapping columnObjectName="country_state_county" columnName="PROVINCE_STATE"/>
+    </attribute>
+    <attribute id="COUNTRY_REGION_" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY_REGION"/>
+      <keyMapping columnObjectName="country_state_county" columnName="COUNTRY_REGION"/>
+    </attribute>
+    <attribute id="LATITUDE_" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LATITUDE"/>
+      <keyMapping columnObjectName="country_state_county" columnName="LATITUDE"/>
+    </attribute>
+    <attribute id="LONGITUDE_" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LONGITUDE"/>
+      <keyMapping columnObjectName="country_state_county" columnName="LONGITUDE"/>
+    </attribute>
+    <attribute id="FIPS_" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FIPS"/>
+      <keyMapping columnObjectName="country_state_county" columnName="FIPS"/>
+    </attribute>
+    <attribute id="COMBINED_KEY_" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMBINED_KEY"/>
+      <keyMapping columnObjectName="country_state_county" columnName="COMBINED_KEY"/>
+    </attribute>
+    <attribute id="GEOM3857__" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOM3857"/>
+      <keyMapping columnObjectName="country_state_county" columnName="GEOM3857"/>
+    </attribute>
+    <attribute id="FINALPOINT__" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FINALPOINT"/>
+      <keyMapping columnObjectName="country_state_county" columnName="FINALPOINT"/>
+    </attribute>
+    <attribute id="GEOM_" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOM"/>
+      <keyMapping columnObjectName="country_state_county" columnName="GEOM"/>
+    </attribute>
+    <attribute id="lsad_name_" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="lsad_name"/>
+      <keyMapping columnObjectName="country_state_county" columnName="lsad_name"/>
+    </attribute>
+    <attribute id="GEOMID_" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOMID"/>
+      <keyMapping columnObjectName="country_state_county" columnName="GEOMID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92.00000000000003" y="112"/>
+    
+      <rectangleSize width="356"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>
