@@ -17,15 +17,15 @@
       "schema": "BTP"
     }
   },
-  "Synonyms::TECHCOENA_QINTEGRATION_QUESTIONS": {
+  "Synonyms::EMPLOYEE_COMFORT_SURVEY_USERINFO": {
     "target": {
-      "object": "TECHCOENA_QINTEGRATION_QUESTIONS",
+      "object": "EMPLOYEE_COMFORT_SURVEY_USERINFO",
       "schema": "BTP"
     }
   },
-  "Synonyms::TECHCOENA_QINTEGRATION_USERINFO": {
+  "Synonyms::EMPLOYEE_COMFORT_SURVEY_QUESTIONS": {
     "target": {
-      "object": "TECHCOENA_QINTEGRATION_USERINFO",
+      "object": "EMPLOYEE_COMFORT_SURVEY_QUESTIONS",
       "schema": "BTP"
     }
   }
