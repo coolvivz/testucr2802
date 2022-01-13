@@ -88,12 +88,6 @@
       <viewAttribute id="county_name"/>
       <viewAttribute id="point3857"/>
       <viewAttribute id="EMPID"/>
-      <viewAttribute id="Q31"/>
-      <viewAttribute id="Q31_PARENT_TOPICS"/>
-      <viewAttribute id="Q31_SENTIMENT_POLARITY"/>
-      <viewAttribute id="Q31_SENTIMENT_SCORE"/>
-      <viewAttribute id="Q31_SENTIMENT"/>
-      <viewAttribute id="Q31_TOPIC_SENTIMENT_LABEL"/>
       <viewAttribute id="RECIPIENT_EMAIL"/>
     </viewAttributes>
     <calculatedViewAttributes/>
@@ -113,12 +107,6 @@
       <mapping xsi:type="Calculation:AttributeMapping" target="point3857" source="point3857"/></input>
     <input node="Models::vt_employees">
       <mapping xsi:type="Calculation:AttributeMapping" target="EMPID" source="EMPID"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="Q31" source="Q31"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="Q31_PARENT_TOPICS" source="Q31_PARENT_TOPICS"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="Q31_SENTIMENT_POLARITY" source="Q31_SENTIMENT_POLARITY"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="Q31_SENTIMENT_SCORE" source="Q31_SENTIMENT_SCORE"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="Q31_SENTIMENT" source="Q31_SENTIMENT"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="Q31_TOPIC_SENTIMENT_LABEL" source="Q31_TOPIC_SENTIMENT_LABEL"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="RECIPIENT_EMAIL" source="RECIPIENT_EMAIL"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="province_state" source="STATENAME"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="county_name" source="COUNTYNAME"/>
@@ -170,32 +158,8 @@
       <descriptions defaultDescription="EMPID"/>
       <keyMapping columnObjectName="Join_2" columnName="EMPID"/>
     </attribute>
-    <attribute id="Q31" order="15" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Q31"/>
-      <keyMapping columnObjectName="Join_2" columnName="Q31"/>
-    </attribute>
-    <attribute id="Q31_PARENT_TOPICS" order="16" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Q31_PARENT_TOPICS"/>
-      <keyMapping columnObjectName="Join_2" columnName="Q31_PARENT_TOPICS"/>
-    </attribute>
-    <attribute id="Q31_SENTIMENT_POLARITY" order="17" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Q31_SENTIMENT_POLARITY"/>
-      <keyMapping columnObjectName="Join_2" columnName="Q31_SENTIMENT_POLARITY"/>
-    </attribute>
-    <attribute id="Q31_SENTIMENT_SCORE" order="18" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Q31_SENTIMENT_SCORE"/>
-      <keyMapping columnObjectName="Join_2" columnName="Q31_SENTIMENT_SCORE"/>
-    </attribute>
-    <attribute id="Q31_SENTIMENT" order="19" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Q31_SENTIMENT"/>
-      <keyMapping columnObjectName="Join_2" columnName="Q31_SENTIMENT"/>
-    </attribute>
-    <attribute id="Q31_TOPIC_SENTIMENT_LABEL" order="20" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Q31_TOPIC_SENTIMENT_LABEL"/>
-      <keyMapping columnObjectName="Join_2" columnName="Q31_TOPIC_SENTIMENT_LABEL"/>
-    </attribute>
   
-    <attribute id="RECIPIENT_EMAIL" order="22" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="RECIPIENT_EMAIL" order="16" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="RECIPIENT_EMAIL"/>
   
       <keyMapping columnObjectName="Join_2" columnName="RECIPIENT_EMAIL"/>
@@ -221,7 +185,7 @@
       <measureMapping columnObjectName="Join_2" columnName="active"/>
     </measure></baseMeasures>
   <calculatedMeasures>
-    <measure id="EMPCOUNT" order="21" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="BIGINT" length="">
+    <measure id="EMPCOUNT" order="15" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="BIGINT" length="">
       <descriptions defaultDescription="EMPCOUNT"/>
       <exceptionAggregation>
         <attribute attributeName="EMPID"/>
@@ -229,14 +193,16 @@
       <formula>1</formula>
       
       
+      
       </measure>
   
-    <measure id="Q_COUNT" order="23" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="BIGINT" length="">
+    <measure id="Q_COUNT" order="17" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="BIGINT" length="">
       <descriptions defaultDescription="Q_COUNT"/>
       <exceptionAggregation>
         <attribute attributeName="RECIPIENT_EMAIL"/>
       </exceptionAggregation>
       <formula>1</formula>
+      
       </measure>
   </calculatedMeasures>
   <restrictedMeasures/>

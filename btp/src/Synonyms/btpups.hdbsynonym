@@ -1,49 +1,7 @@
 {
-  "Synonyms::COVIDDATA": {
-    "target": {
-      "object": "COVIDDATA",
-      "schema": "BTP"
-    }
-  },
   "Synonyms::EMPLOYEEDATA": {
     "target": {
       "object": "EMPLOYEEDATA",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::SPATIALBASE3857": {
-    "target": {
-      "object": "SPATIALBASE3857",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::US_COUNTIESDEMOSPATIALCOVID": {
-    "target": {
-      "object": "US_COUNTIESDEMOSPATIALCOVID",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::COVIDSUMMARY2021": {
-    "target": {
-      "object": "COVIDSUMMARY2021",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::COUNTYSPATIAL": {
-    "target": {
-      "object": "COUNTYSPATIAL",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::SPATIALNEWCOUNT": {
-    "target": {
-      "object": "SPATIALNEWCOUNT",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::VT_covidsummary2021": {
-    "target": {
-      "object": "VT_covidsummary2021",
       "schema": "BTP"
     }
   },
@@ -51,24 +9,6 @@
     "target": {
       "object": "VT_uscountiesnewspatial",
       "schema": "BTP"
-    }
-  },
-  "Synonyms::LOCID": {
-    "target": {
-      "object": "LOCID",
-      "schema": "BTP"
-    }
-  },
-  "Synonyms::DUMMY": {
-    "target": {
-      "object": "DUMMY",
-      "schema": "SYS",
-      "database": "H00"
-    }
-  },
-  "Synonyms::getID": {
-    "target": {
-      "object": "Functions::getID"
     }
   },
   "Synonyms::vt_covidsummary2021dec": {
