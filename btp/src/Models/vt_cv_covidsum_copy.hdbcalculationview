@@ -14,6 +14,7 @@
     <resourceUri>Models::vt_employees</resourceUri>
   </DataSource>
 </dataSources>
+<snapshotProcedures/>
 <calculationViews>
   <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1" filterExpressionLanguage="SQL">
     <viewAttributes>
